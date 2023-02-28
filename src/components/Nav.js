@@ -47,13 +47,13 @@ const Nav = ({ services }) => {
   return (
     <nav ref={nav}>
       <div className="logo">
-        <Link to="/">
+        <Link to="/toyan-office">
           <img src={Logo} alt="logo" />
         </Link>
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink onClick={handleToggle} className="nav-link" to="/">
+          <NavLink onClick={handleToggle} className="nav-link" to="/toyan-office">
             الرئيسية
           </NavLink>
         </li>
