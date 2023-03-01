@@ -43,10 +43,10 @@ const Employ = () => {
         <h3>قدم على وظيفتك</h3>
         <form id="apply_form" onSubmit={handleSubmit}>
           <input
+            required
             type="text"
             name="name"
             placeholder="الاسم كاملاً"
-            required
             onChange={e =>
               setFormData({ ...formData, fullName: e.target.value })}
           />
@@ -71,10 +71,8 @@ const Employ = () => {
               type="file"
               name="file"
               className="file_in"
-              placeholder="رفع السيرة الذاتية"
               accept="application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               onChange={e => {
-                console.log(e.target.files[0]);
                 setFormData({ ...formData, resume: e.target.files[0] });
               }}
             />
