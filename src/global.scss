@@ -1325,6 +1325,9 @@ footer {
   }
 }
 @media (max-width: 450px) {
+  nav {
+    padding: 10px 30px;
+  }
   header .swiper .swiper-slide .decription {
     width: 85%;
   }
