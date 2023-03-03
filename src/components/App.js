@@ -26,8 +26,6 @@ const App = () => {
       setClients(data.data);
     };
     clientsFetch();
-  }, []);
-  useEffect(() => {
     const sliderFetch = async () => {
       let { data } = await axios.get(
         "https://el-twyan.onrender.com/api/v1/slider"
@@ -35,8 +33,6 @@ const App = () => {
       setHeader(data.data);
     };
     sliderFetch();
-  }, []);
-  useEffect(() => {
     const servicesFetch = async () => {
       let { data } = await axios.get(
         "https://el-twyan.onrender.com/api/v1/services"

@@ -7,8 +7,9 @@ const Nav = ({ services }) => {
   const drop = useRef(null);
   const search = useRef(null);
   const navBtn = useRef(null);
-  const [toggle, setToggle] = useState(false);
   const [open, setOpen] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [arabic, setArabic] = useState(false);
   const handlemove = () => {
     drop.current.style.height = "270px";
   };
@@ -44,6 +45,17 @@ const Nav = ({ services }) => {
       nav.current.classList.remove("active");
     }
   });
+  const handleLang = e => {
+    if (arabic === false) {
+      setArabic(true);
+      e.target.innerHTML = "AR";
+      document.querySelector("body").style.direction = "ltr";
+    } else {
+      setArabic(false);
+      e.target.innerHTML = "En";
+      document.querySelector("body").style.direction = "rtl";
+    }
+  };
   return (
     <nav ref={nav}>
       <div className="logo">
@@ -53,7 +65,11 @@ const Nav = ({ services }) => {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink onClick={handleToggle} className="nav-link" to="/toyan-office">
+          <NavLink
+            onClick={handleToggle}
+            className="nav-link"
+            to="/toyan-office"
+          >
             الرئيسية
           </NavLink>
         </li>
@@ -116,7 +132,7 @@ const Nav = ({ services }) => {
           <i className="fa-solid fa-magnifying-glass" />
         </button>
         <span />
-        <button>EN</button>
+        <button onClick={handleLang}>EN</button>
       </div>
     </nav>
   );
