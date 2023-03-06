@@ -20,7 +20,7 @@ const Nav = ({ services }) => {
   };
   const handleclick = () => {
     if (toggle === false) {
-      search.current.style.width = "130px";
+      search.current.style.width = "150px";
       setToggle(true);
     } else {
       search.current.style.width = "0";

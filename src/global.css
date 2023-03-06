@@ -88,7 +88,7 @@ body.en .news form button img {
   transform: rotateY(180deg);
 }
 body.en nav .search-lang input {
-  left: -90%;
+  left: -110%;
 }
 body.en .sendmessage .submit_area {
   direction: rtl;
@@ -1285,6 +1285,9 @@ footer .contact a:hover {
   nav {
     padding: 10px 50px;
   }
+  nav .search-lang input {
+    top: 40px;
+  }
   .about .description {
     padding-right: 50px;
   }
@@ -1371,6 +1374,11 @@ footer .contact a:hover {
   }
 }
 @media (max-width: 888px) {
+  body.en nav .search-lang input {
+    left: 50%;
+    top: -30px;
+    transform: translate(-50%, -50%);
+  }
   nav {
     padding: 10px 60px;
   }
@@ -1412,7 +1420,9 @@ footer .contact a:hover {
     left: 0;
   }
   nav.opened .search-lang input {
-    left: 58%;
+    left: 50%;
+    top: -30px;
+    transform: translate(-50%, -50%);
   }
   nav.opened .search-lang button {
     color: #4c4c4c;

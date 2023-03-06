@@ -120,7 +120,7 @@ body.en {
     }
   }
   nav .search-lang input {
-    left: -90%;
+    left: -110%;
   }
   .sendmessage .submit_area {
     direction: rtl;
@@ -1185,6 +1185,9 @@ footer {
   }
   nav {
     padding: 10px 50px;
+    .search-lang input {
+      top: 40px;
+    }
   }
   .about .description {
     padding-right: 50px;
@@ -1276,6 +1279,11 @@ footer {
   }
 }
 @media (max-width: 888px) {
+  body.en nav .search-lang input {
+    left: 50%;
+    top: -30px;
+    transform: translate(-50%, -50%);
+  }
   nav {
     &.opened {
       height: 100vh;
@@ -1297,10 +1305,6 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         .drobdown {
-          // left: 50%;
-          // top: 33%;
-          // transform: translateX(-50%);
-          // z-index: 99999999999999;
           display: none;
         }
         .nav-item .nav-link {
@@ -1315,7 +1319,9 @@ footer {
         width: 100%;
         left: 0;
         input {
-          left: 58%;
+          left: 50%;
+          top: -30px;
+          transform: translate(-50%, -50%);
         }
         button {
           color: $gray2;
