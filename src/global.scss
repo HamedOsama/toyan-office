@@ -120,7 +120,7 @@ body.en {
     }
   }
   nav .search-lang input {
-    left: -110%;
+    left: -130%;
   }
   .sendmessage .submit_area {
     direction: rtl;
@@ -244,7 +244,7 @@ nav {
       @include clearInput();
       border-bottom: 2px solid $white;
       position: absolute;
-      left: 60%;
+      left: 82%;
       top: 4px;
       color: white;
       z-index: 10000000;

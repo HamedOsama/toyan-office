@@ -88,7 +88,7 @@ body.en .news form button img {
   transform: rotateY(180deg);
 }
 body.en nav .search-lang input {
-  left: -110%;
+  left: -130%;
 }
 body.en .sendmessage .submit_area {
   direction: rtl;
@@ -223,7 +223,7 @@ nav .search-lang input {
   outline: none;
   border-bottom: 2px solid #ffffff;
   position: absolute;
-  left: 60%;
+  left: 82%;
   top: 4px;
   color: white;
   z-index: 10000000;
