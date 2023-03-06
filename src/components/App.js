@@ -54,7 +54,7 @@ const App = () => {
       <div className="app-holder">
         <Routes>
           <Route
-            path="/toyan-office"
+            path="/"
             element={
               <Home slider={header} services={services} clients={clients} />
             }
