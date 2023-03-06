@@ -247,6 +247,7 @@ nav {
       left: 60%;
       top: 4px;
       color: white;
+      z-index: 10000000;
       &::placeholder {
         color: $white;
       }
@@ -257,7 +258,6 @@ nav {
       color: $white;
       cursor: pointer;
       width: 35px;
-      z-index: 10000000;
     }
     span {
       display: block;

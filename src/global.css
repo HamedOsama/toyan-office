@@ -226,6 +226,7 @@ nav .search-lang input {
   left: 60%;
   top: 4px;
   color: white;
+  z-index: 10000000;
 }
 nav .search-lang input::-moz-placeholder {
   color: #ffffff;
@@ -241,7 +242,6 @@ nav .search-lang button {
   color: #ffffff;
   cursor: pointer;
   width: 35px;
-  z-index: 10000000;
 }
 nav .search-lang span {
   display: block;
