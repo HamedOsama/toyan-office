@@ -1657,27 +1657,25 @@ footer .contact a:hover {
   .map .form {
     padding: 50px 20px;
   }
-  .contact_header {
-    height: 310px;
-  }
-  .contact_header .image {
+  .contact_header .image,
+  .know_header .image,
+  .employ_header .image,
+  .services_header .image,
+  .clients_header .image {
     height: 220px;
   }
-  .contact_header .path_desc {
-    height: 90px;
-    padding: 0 20px;
+  .contact_header .path_desc,
+  .know_header .path_desc,
+  .employ_header .path_desc,
+  .services_header .path_desc,
+  .clients_header .path_desc {
+    padding: 20px;
   }
-  .contact_header .path_desc h2 {
-    line-height: 30px;
-  }
-  .know_header .image {
-    height: 200px;
-  }
-  .know_header .path_desc {
-    height: 120px;
-    padding: 0 20px;
-  }
-  .know_header .path_desc h2 {
+  .contact_header .path_desc h2,
+  .know_header .path_desc h2,
+  .employ_header .path_desc h2,
+  .services_header .path_desc h2,
+  .clients_header .path_desc h2 {
     line-height: 30px;
   }
   .inner_holder {
@@ -1706,45 +1704,6 @@ footer .contact a:hover {
   .blog_holder .article_img h3,
   .blog_holder .article_description h3 {
     font-size: 21px;
-  }
-  .employ_header {
-    height: 320px;
-  }
-  .employ_header .image {
-    height: 200px;
-  }
-  .employ_header .path_desc {
-    padding: 0 20px;
-    height: 120px;
-  }
-  .employ_header .path_desc h2 {
-    line-height: 30px;
-  }
-  .services_header {
-    height: 320px;
-  }
-  .services_header .image {
-    height: 200px;
-  }
-  .services_header .path_desc {
-    padding: 0 20px;
-    height: 120px;
-  }
-  .services_header .path_desc h2 {
-    line-height: 30px;
-  }
-  .clients_header {
-    height: 340px;
-  }
-  .clients_header .image {
-    height: 200px;
-  }
-  .clients_header .path_desc {
-    padding: 0 20px;
-    height: 140px;
-  }
-  .clients_header .path_desc h2 {
-    line-height: 30px;
   }
   .clients_gird {
     padding: 60px 40px;
