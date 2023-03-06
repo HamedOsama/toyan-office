@@ -63,7 +63,7 @@ const Nav = ({ services }) => {
   return (
     <nav ref={nav}>
       <div className="logo">
-        <Link to="/toyan-office">
+        <Link to="/">
           <img src={Logo} alt="logo" />
         </Link>
       </div>
@@ -72,7 +72,7 @@ const Nav = ({ services }) => {
           <NavLink
             onClick={handleToggle}
             className="nav-link"
-            to="/toyan-office"
+            to="/"
           >
             {/*{t("home")}*/}
             الرئيسية
