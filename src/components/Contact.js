@@ -9,8 +9,8 @@ const Contact = () => {
         <div className="image" />
         <div className="path_desc">
           <h2>
-            <span>تواصل معنا/</span>نقدم حلولاً متخصصة ومبتكرة، لا تتردد في
-            التواصل معنا.
+            <span>تواصل معنا/</span>
+            <p>نقدم حلولاً متخصصة ومبتكرة، لا تتردد في التواصل معنا</p>
           </h2>
         </div>
       </header>

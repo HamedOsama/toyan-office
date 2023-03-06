@@ -1,10 +1,10 @@
 import React from "react";
-import "swiper/css";
+import { Link } from "react-router-dom";
 import News from "./News";
+import AskService from "./AskService";
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import AskService from "./AskService";
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, Mousewheel, Keyboard } from "swiper";
 
@@ -143,7 +143,7 @@ const Home = ({ slider, services, clients }) => {
             576: {
               slidesPerView: 2
             },
-            800: {
+            1200: {
               slidesPerView: 3
             }
           }}

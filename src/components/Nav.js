@@ -1,15 +1,17 @@
 import React, { useRef, useState } from "react";
 import Logo from "../assets/logo.png";
+import { useTranslation } from "react-i18next";
 import { NavLink, Link } from "react-router-dom";
 
 const Nav = ({ services }) => {
+  const { i18n } = useTranslation();
   const nav = useRef(null);
   const drop = useRef(null);
   const search = useRef(null);
   const navBtn = useRef(null);
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [arabic, setArabic] = useState(false);
+  const [lang, setLang] = useState("ar");
   const handlemove = () => {
     drop.current.style.height = "270px";
   };
@@ -18,7 +20,7 @@ const Nav = ({ services }) => {
   };
   const handleclick = () => {
     if (toggle === false) {
-      search.current.style.width = "150px";
+      search.current.style.width = "130px";
       setToggle(true);
     } else {
       search.current.style.width = "0";
@@ -46,14 +48,16 @@ const Nav = ({ services }) => {
     }
   });
   const handleLang = e => {
-    if (arabic === false) {
-      setArabic(true);
+    if (lang === "ar") {
+      setLang("en");
+      i18n.changeLanguage("en");
       e.target.innerHTML = "AR";
-      document.querySelector("body").style.direction = "ltr";
+      document.querySelector("body").classList.add("en");
     } else {
-      setArabic(false);
+      setLang("ar");
+      i18n.changeLanguage("ar");
       e.target.innerHTML = "En";
-      document.querySelector("body").style.direction = "rtl";
+      document.querySelector("body").classList.remove("en");
     }
   };
   return (
@@ -70,6 +74,7 @@ const Nav = ({ services }) => {
             className="nav-link"
             to="/toyan-office"
           >
+            {/*{t("home")}*/}
             الرئيسية
           </NavLink>
         </li>

@@ -94,9 +94,48 @@ a {
   img {
     max-width: 70%;
   }
-  z-index: 9999999999999999999999999999999999999;
+  z-index: 9999999999999999999999999999999999;
 }
 /********************************************/
+body.en {
+  direction: ltr;
+  .about {
+    .wrapper img {
+      transform: rotateY(180deg);
+    }
+    .description {
+      padding-right: 0;
+      padding-left: 120px;
+    }
+  }
+  .news form {
+    input {
+      border-radius: 15px 0 0 15px;
+    }
+    button {
+      border-radius: 0 15px 15px 0;
+      img {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  nav .search-lang input {
+    left: -90%;
+  }
+  .sendmessage .submit_area {
+    direction: rtl;
+  }
+  .services_header,
+  .contact_header,
+  .clients_header,
+  .know_header,
+  .employ_header {
+    .path_desc span {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
 nav {
   top: 0;
   left: 0;
@@ -205,7 +244,7 @@ nav {
       @include clearInput();
       border-bottom: 2px solid $white;
       position: absolute;
-      left: 90%;
+      left: 60%;
       top: 4px;
       color: white;
       &::placeholder {
@@ -236,7 +275,6 @@ nav {
     }
   }
 }
-
 /******home-start*******/
 header {
   width: 100%;
@@ -529,7 +567,7 @@ header {
 /*******services-start***/
 .services_header {
   width: 100%;
-  height: 330px;
+  height: 100%;
   box-shadow: $shadow;
   .image {
     width: 100%;
@@ -540,8 +578,7 @@ header {
   }
   .path_desc {
     width: 100%;
-    height: 50px;
-    padding: 0 120px;
+    padding: 20px 120px;
     display: flex;
     align-items: center;
     h2 {
@@ -556,12 +593,16 @@ header {
       margin-left: 8px;
       font-size: 20px;
     }
+    p {
+      display: inline-block;
+    }
   }
 }
 .services_container {
   width: 100%;
   padding: 75px 120px;
   display: flex;
+  justify-content: space-between;
   gap: 80px;
   aside {
     width: 300px;
@@ -583,7 +624,7 @@ header {
 /*******clients-start****/
 .clients_header {
   width: 100%;
-  height: 330px;
+  height: 100%;
   box-shadow: $shadow;
   .image {
     width: 100%;
@@ -594,8 +635,7 @@ header {
   }
   .path_desc {
     width: 100%;
-    height: 50px;
-    padding: 0 120px;
+    padding: 20px 120px;
     display: flex;
     align-items: center;
     h2 {
@@ -605,6 +645,9 @@ header {
     span {
       margin-left: 8px;
       font-size: 20px;
+    }
+    p {
+      display: inline-block;
     }
   }
 }
@@ -650,7 +693,7 @@ header {
 /*******employ-start****/
 .employ_header {
   width: 100%;
-  height: 300px;
+  height: 100%;
   box-shadow: $shadow;
   margin-bottom: 60px;
   .image {
@@ -662,8 +705,7 @@ header {
   }
   .path_desc {
     width: 100%;
-    height: 50px;
-    padding: 0 120px;
+    padding: 20px 120px;
     display: flex;
     align-items: center;
     h2 {
@@ -673,6 +715,9 @@ header {
     span {
       margin-left: 8px;
       font-size: 20px;
+    }
+    p {
+      display: inline-block;
     }
   }
 }
@@ -761,7 +806,7 @@ header {
 /******knowlege-start**/
 .know_header {
   width: 100%;
-  height: 320px;
+  height: 100%;
   box-shadow: $shadow;
   .image {
     width: 100%;
@@ -772,8 +817,7 @@ header {
   }
   .path_desc {
     width: 100%;
-    height: 50px;
-    padding: 0 120px;
+    padding: 20px 120px;
     display: flex;
     align-items: center;
     h2 {
@@ -783,6 +827,9 @@ header {
     span {
       margin-left: 8px;
       font-size: 20px;
+    }
+    p {
+      display: inline-block;
     }
   }
 }
@@ -869,7 +916,7 @@ header {
 /******Contact-start****/
 .contact_header {
   width: 100%;
-  height: 320px;
+  height: 100%;
   box-shadow: $shadow;
   .image {
     width: 100%;
@@ -880,8 +927,7 @@ header {
   }
   .path_desc {
     width: 100%;
-    height: 50px;
-    padding: 0 120px;
+    padding: 20px 120px;
     display: flex;
     align-items: center;
     h2 {
@@ -891,6 +937,9 @@ header {
     span {
       margin-left: 8px;
       font-size: 20px;
+    }
+    p {
+      display: inline-block;
     }
   }
 }
@@ -1128,7 +1177,105 @@ footer {
   position: relative;
   z-index: 9999999999999;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  body.en {
+    .about .description {
+      padding-left: 50px;
+    }
+  }
+  nav {
+    padding: 10px 50px;
+  }
+  .about .description {
+    padding-right: 50px;
+    p {
+      font-size: 20px;
+      line-height: 45px;
+    }
+  }
+  .clients {
+    padding: 40px 50px;
+  }
+  .about .about-grid {
+    padding: 60px 50px;
+    gap: 45px;
+    .about-card {
+      height: 310px;
+    }
+  }
+  .services {
+    padding: 20px 50px;
+    .services_grid {
+      gap: 45px;
+    }
+  }
+  .ask_service {
+    padding: 30px 50px;
+    gap: 40px;
+    .ask_form {
+      width: calc(50% - 20px);
+    }
+    .ask_descrip ol li {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  .news {
+    padding: 100px;
+  }
+  footer {
+    padding: 50px;
+    .footer_grid {
+      p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .logo {
+        padding: 0;
+      }
+      .col {
+        padding: 0 15px;
+      }
+      .services {
+        padding: 0 40px;
+      }
+    }
+  }
+  .services_container {
+    padding: 75px 50px;
+  }
+  .services_header,
+  .contact_header,
+  .employ_header,
+  .clients_header,
+  .know_header {
+    .path_desc {
+      padding: 20px 50px;
+    }
+  }
+  .inner_holder {
+    padding: 80px 50px;
+    .blogs_grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+    }
+  }
+  .blog_holder {
+    padding: 80px 50px;
+  }
+  .map .form {
+    padding: 50px;
+  }
+  .info {
+    padding: 0 50px;
+    gap: 120px;
+  }
+  .clients_gird {
+    padding: 80px 50px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 888px) {
   nav {
     &.opened {
       height: 100vh;
@@ -1277,13 +1424,8 @@ footer {
   .services_header,
   .know_header,
   .contact_header {
-    height: 320px;
     .image {
       height: 230px;
-    }
-    .path_desc {
-      height: 90px;
-      padding: 0 50px;
     }
   }
   .clients_gird {
@@ -1324,7 +1466,7 @@ footer {
     }
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 516px) {
   nav {
     padding: 10px 30px;
   }
@@ -1349,7 +1491,6 @@ footer {
         line-height: 35px;
       }
     }
-
     .about-grid {
       grid-template-columns: repeat(1, 1fr);
       padding: 40px 25px;
