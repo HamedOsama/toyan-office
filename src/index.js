@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import App from "./components/App";
 import ScrollToTopOnNav from "./components/ScrollTOTopOnNav";
-import "./i18next";
+import "./i18n";
 import "./global.css";
 import "../node_modules/react-toastify/dist/ReactToastify.css";
 import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";

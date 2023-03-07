@@ -5,6 +5,7 @@ import AskService from "./AskService";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, Mousewheel, Keyboard } from "swiper";
 
@@ -14,6 +15,7 @@ import la from "../assets/la.png";
 import about from "../assets/about.png";
 
 const Home = ({ slider, services, clients }) => {
+  const { t } = useTranslation();
   return (
     <React.Fragment>
       <header className="header-slider">
@@ -51,15 +53,14 @@ const Home = ({ slider, services, clients }) => {
       <section className="about">
         <div className="about-flex">
           <div className="description">
-            <span>من نحن</span>
-            <h1>مكتب عمر الطويـان للاستشـارات الإداريـة</h1>
+            <span>
+              {t("aboutTitle")}
+            </span>
+            <h1>
+              {t("CompanyTitle")}
+            </h1>
             <p>
-              الحــاصــل علــى التــرخيــص المـهنــي رقــم 15384، نقدم
-              الاستشارات الإداريـة والاقتصاديـة والتسويقية والمالية للمنظمات
-              الحكـومية والخاصة والأفراد. خدماتنـا للاستشـارات الإداريـة هي
-              الأداة المسـاعدة للشركات والمؤسسات في مراحل التأسـيس والنـمو،
-              والتطـوير إلـى النجــاح، ووضع خطط لتحسين وتطوير الإداء في مجال
-              الإدارة، والعلاقات العامة، والموارد البشرية، والتسويق.
+              {t("aboutDesc")}
             </p>
           </div>
           <div className="wrapper">
@@ -71,7 +72,9 @@ const Home = ({ slider, services, clients }) => {
             <div className="card-icon">
               <img src={la} alt="vision" />
             </div>
-            <h2>رؤيتنا</h2>
+            <h2>
+              {t("vision")}
+            </h2>
             <p className="cen">
               مكتب إقليمي رائد فـي الاستشــارات الإداريــة والتطوير يرشد قرارات
               المستفيدين بآراء الخبراء والوصول إلــى المفهوم الشــامــل لخدمــات
@@ -83,7 +86,9 @@ const Home = ({ slider, services, clients }) => {
             <div className="card-icon">
               <img src={me} alt="message" />
             </div>
-            <h2>رسالتنا</h2>
+            <h2>
+              {t("message")}
+            </h2>
             <p className="cen-p">
               تقديم خدمات تدريبية، واستشارات إدارية احترافية، وحلول إبداعية
               بجودة عالمية.
@@ -93,7 +98,9 @@ const Home = ({ slider, services, clients }) => {
             <div className="card-icon">
               <img src={ha} alt="value" />
             </div>
-            <h2>قيمنا</h2>
+            <h2>
+              {t("value")}
+            </h2>
             <p className="cen-p">
               الالتزام والمسؤولية <br /> الأمانة والمصداقية <br /> الجودة
               والمهنية
@@ -102,7 +109,9 @@ const Home = ({ slider, services, clients }) => {
         </div>
       </section>
       <section className="services">
-        <h2>خدمتنا</h2>
+        <h2>
+          {t("services")}
+        </h2>
         <div className="services_grid">
           {services.map(ser => {
             return (
@@ -129,7 +138,9 @@ const Home = ({ slider, services, clients }) => {
       </section>
       <AskService />
       <section className="clients">
-        <h3>عملاؤنا</h3>
+        <h3>
+          {t("clients")}
+        </h3>
         <Swiper
           pagination={{
             clickable: true

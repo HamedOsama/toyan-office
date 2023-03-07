@@ -1,0 +1,43 @@
+{
+  "homeLink": "Home",
+  "servicesLink": "Services",
+  "clientsLink": "Clients",
+  "employmentLink": "Employment",
+  "knowlegeLink": "Blogs",
+  "contactLink": "Contact",
+  "search": "Search for service",
+  "aboutTitle": "About Us",
+  "CompanyTitle": "Omar Altowyan Management Consulting Office",
+  "aboutDesc": "Holder of professional license No. 15384. We provide administrative, economic, marketing and financial advice to governmental and private organizations and individuals. Our management consulting services are the auxiliary tool for companies and institutions in the stages of incorporation and growth, and development to success, and the development of plans to improve and develop performance in the field of management, public relations, human resources, and marketing.",
+  "vision": "Our Vision",
+  "message": "Our Message",
+  "value": "Our Values",
+  "services": "Our Services",
+  "clients": "Our Clients",
+  "askSequense": {
+    "1": "Service request stages",
+    "2": "The service applicant will be contacted by customer service.",
+    "3": "Customer service representatives will obtain service data and information through you, and then we will present to you the technical and financial offer for the service.",
+    "4": "After your approval of the financial and technical offer, the technical offer will be transferred to the relevant department to start implementing it immediately.",
+    "5": "After preparing the service by the concerned department, it is audited and reviewed.",
+    "6": "Then it is sent to the customer, and the after-sales customer service process takes place."
+  },
+  "requestForm": {
+    "1": "Submit your request now",
+    "2": "Name",
+    "3": "Email Address",
+    "4": "Phone Number",
+    "5": "Service Type",
+    "6": "Message",
+    "7": "Send",
+    "8": "Request has been sent successfully",
+    "9": "Another service request",
+    "10": "Try Again"
+  },
+  "newsLetter": {
+    "1": "Subscribe to the newsletter to receive the best offers from Omar Altowyan's office",
+    "2": "Subscribe",
+    "3":"Subscription Succeeded"
+  },
+  "forContact":"Contacts:"
+}

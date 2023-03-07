@@ -110,6 +110,9 @@ body.en {
     .description {
       padding-right: 0;
       padding-left: 120px;
+      p {
+        line-height: 45px;
+      }
     }
   }
   .news form {
@@ -137,6 +140,18 @@ body.en {
     .path_desc span {
       margin-left: 0;
       margin-right: 8px;
+    }
+  }
+  footer .footer_grid {
+    .col {
+      padding: 0 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .services {
+      padding: 0 70px;
     }
   }
 }
@@ -1083,7 +1098,7 @@ footer {
   background-repeat: no-repeat;
   background-image: url("assets/news.png");
   .label {
-    width: 600px;
+    width: 800px;
     height: 40px;
     border-radius: 15px;
     @include centerFlex();

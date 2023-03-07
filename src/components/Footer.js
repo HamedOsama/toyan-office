@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/footer_logo.png";
+import { useTranslation } from "react-i18next";
 const Footer = ({ services }) => {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="footer_grid">
@@ -9,18 +11,17 @@ const Footer = ({ services }) => {
           <img src={Logo} alt="logo" />
         </div>
         <div className="col">
-          <h3>من نحن</h3>
+          <h3>
+            {t("aboutTitle")}
+          </h3>
           <p>
-            نقــدم الاستشــارات الإداريـــة والاقتصــاديــة والتسويقية والمـالية
-            للمنظمــات الحكــومية والخاصة والأفراد. <br /> خدماتنــا
-            للاستشــارات الإداريـــة هــي الأداة المساعدة للشركات والمؤسسات في
-            مراحل التـأسيس والنمو، والتطوير إلى النجاح، ووضع خطط لتحسين وتطوير
-            الإداء في مجال الإدارة، والعلاقـات العامـة، والموارد البشرية،
-            والتسويق.
+            {t("aboutDesc")}
           </p>
         </div>
         <div className="col services">
-          <h3>خدماتنا</h3>
+          <h3>
+            {t("services")}
+          </h3>
           <ul>
             {services.map(ser => {
               return (
@@ -36,7 +37,9 @@ const Footer = ({ services }) => {
       </div>
       <div className="line" />
       <div className="contact">
-        <h4>للتواصل:</h4>
+        <h4>
+          {t("forContact")}
+        </h4>
         <a href="tel:+055 0109 595">055 0109 595</a>
         <a href="tel:+920 009 685">920 009 685</a>
         <a href="mailto:Omaraltowyan@gmail.com">Omaraltowyan@gmail.com</a>

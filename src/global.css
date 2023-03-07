@@ -83,6 +83,9 @@ body.en .about .description {
   padding-right: 0;
   padding-left: 120px;
 }
+body.en .about .description p {
+  line-height: 45px;
+}
 body.en .news form input {
   border-radius: 15px 0 0 15px;
 }
@@ -105,6 +108,16 @@ body.en .know_header .path_desc span,
 body.en .employ_header .path_desc span {
   margin-left: 0;
   margin-right: 8px;
+}
+body.en footer .footer_grid .col {
+  padding: 0 20px;
+}
+body.en footer .footer_grid p {
+  font-size: 16px;
+  line-height: 24px;
+}
+body.en footer .footer_grid .services {
+  padding: 0 70px;
 }
 
 nav {
@@ -1154,7 +1167,7 @@ footer .contact a:hover {
   background-image: url("assets/news.png");
 }
 .news .label {
-  width: 600px;
+  width: 800px;
   height: 40px;
   border-radius: 15px;
   display: flex;

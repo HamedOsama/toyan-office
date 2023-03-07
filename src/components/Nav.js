@@ -82,7 +82,7 @@ const Nav = ({ services }) => {
             onClick={handleToggle}
             className="icon nav-link"
           >
-            خدماتنا <i className="fa-solid fa-caret-down" />
+            {t("servicesLink")} <i className="fa-solid fa-caret-down" />
           </NavLink>
           <div
             ref={drop}
@@ -105,22 +105,22 @@ const Nav = ({ services }) => {
         </li>
         <li className="nav-item">
           <NavLink onClick={handleToggle} className="nav-link" to="/clients">
-            عملاؤنا
+            {t("clientsLink")}
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink onClick={handleToggle} className="nav-link" to="/employment">
-            التوظيف
+            {t("employmentLink")}
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink onClick={handleToggle} className="nav-link" to="/knowlege">
-            المعرفة
+            {t("knowlegeLink")}
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink onClick={handleToggle} className="nav-link" to="/contact">
-            اتصل بنا
+            {t("contactLink")}
           </NavLink>
         </li>
       </ul>
@@ -128,7 +128,7 @@ const Nav = ({ services }) => {
         <i ref={navBtn} className="fas fa-bars" />
       </div>
       <div className="search-lang">
-        <input type="text" placeholder="ابحث عن خدمه" ref={search} />
+        <input type="text" placeholder={t("search")} ref={search} />
         <button onClick={handleclick}>
           <i className="fa-solid fa-magnifying-glass" />
         </button>
