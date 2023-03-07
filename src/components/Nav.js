@@ -1,17 +1,18 @@
 import React, { useRef, useState } from "react";
 import Logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import { NavLink, Link } from "react-router-dom";
 
 const Nav = ({ services }) => {
-  const { i18n } = useTranslation();
   const nav = useRef(null);
   const drop = useRef(null);
   const search = useRef(null);
   const navBtn = useRef(null);
+  const { t } = useTranslation();
+  const [lang, setLang] = useState("ar");
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [lang, setLang] = useState("ar");
   const handlemove = () => {
     drop.current.style.height = "270px";
   };
@@ -50,13 +51,13 @@ const Nav = ({ services }) => {
   const handleLang = e => {
     if (lang === "ar") {
       setLang("en");
-      i18n.changeLanguage("en");
       e.target.innerHTML = "AR";
+      i18next.changeLanguage("en");
       document.querySelector("body").classList.add("en");
     } else {
       setLang("ar");
-      i18n.changeLanguage("ar");
       e.target.innerHTML = "En";
+      i18next.changeLanguage("ar");
       document.querySelector("body").classList.remove("en");
     }
   };
@@ -70,8 +71,7 @@ const Nav = ({ services }) => {
       <ul className="nav-items">
         <li className="nav-item">
           <NavLink onClick={handleToggle} className="nav-link" to="/">
-            {/*{t("home")}*/}
-            الرئيسية
+            {t("homeLink")}
           </NavLink>
         </li>
         <li className="nav-item">
