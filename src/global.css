@@ -226,7 +226,7 @@ nav .search-lang input {
   left: 82%;
   top: 4px;
   color: white;
-  z-index: 10000000;
+  z-index: -1;
 }
 nav .search-lang input::-moz-placeholder {
   color: #ffffff;
@@ -1406,7 +1406,9 @@ footer .contact a:hover {
     transform: translateX(-50%);
   }
   nav.opened .nav-items .drobdown {
-    display: none;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%);
   }
   nav.opened .nav-items .nav-item .nav-link {
     color: #4c4c4c;

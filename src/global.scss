@@ -247,7 +247,7 @@ nav {
       left: 82%;
       top: 4px;
       color: white;
-      z-index: 10000000;
+      z-index: -1;
       &::placeholder {
         color: $white;
       }
@@ -1307,7 +1307,9 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         .drobdown {
-          display: none;
+          left: 50%;
+          top: 90px;
+          transform: translateX(-50%);
         }
         .nav-item .nav-link {
           color: $gray2;
