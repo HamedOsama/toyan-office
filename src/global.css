@@ -632,7 +632,6 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   width: 100%;
   padding: 75px 120px;
   display: flex;
-  justify-content: space-between;
   gap: 80px;
 }
 .services_container aside {
