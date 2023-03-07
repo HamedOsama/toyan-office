@@ -1310,10 +1310,11 @@ footer {
         top: 30%;
         left: 50%;
         transform: translateX(-50%);
+        i {
+          display: none;
+        }
         .drobdown {
-          left: 50%;
-          top: 90px;
-          transform: translateX(-50%);
+          display: none;
         }
         .nav-item .nav-link {
           color: $gray2;

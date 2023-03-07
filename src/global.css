@@ -1410,10 +1410,11 @@ footer .contact a:hover {
     left: 50%;
     transform: translateX(-50%);
   }
+  nav.opened .nav-items i {
+    display: none;
+  }
   nav.opened .nav-items .drobdown {
-    left: 50%;
-    top: 90px;
-    transform: translateX(-50%);
+    display: none;
   }
   nav.opened .nav-items .nav-item .nav-link {
     color: #4c4c4c;
