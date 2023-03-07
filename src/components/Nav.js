@@ -69,11 +69,7 @@ const Nav = ({ services }) => {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink
-            onClick={handleToggle}
-            className="nav-link"
-            to="/"
-          >
+          <NavLink onClick={handleToggle} className="nav-link" to="/">
             {/*{t("home")}*/}
             الرئيسية
           </NavLink>
