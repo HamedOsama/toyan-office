@@ -14,7 +14,7 @@ import me from "../assets/me.png";
 import la from "../assets/la.png";
 import about from "../assets/about.png";
 
-const Home = ({ slider, services, clients }) => {
+const Home = ({ slider, services, clients, lng }) => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
@@ -34,7 +34,7 @@ const Home = ({ slider, services, clients }) => {
             return (
               <SwiperSlide key={slide._id}>
                 <img
-                  src={`https://el-twyan.onrender.com/images/${slide.image}`}
+                  src={`http://89.116.236.15/images/${slide.image}`}
                   alt={slide._id}
                 />
                 <div className="layer" />
@@ -42,7 +42,7 @@ const Home = ({ slider, services, clients }) => {
                 <div className="left" />
                 <div className="decription">
                   <p>
-                    {slide.text}
+                    {lng === "ar" ? slide.text.ar : slide.text.en}
                   </p>
                 </div>
               </SwiperSlide>
@@ -166,7 +166,7 @@ const Home = ({ slider, services, clients }) => {
               <SwiperSlide className="swiper_card" key={client._id}>
                 <img
                   loading="lazy"
-                  src={`https://el-twyan.onrender.com/images/${client.image}`}
+                  src={`http://89.116.236.15/images/${client.image}`}
                   alt={client.title}
                 />
               </SwiperSlide>

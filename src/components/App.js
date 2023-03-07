@@ -17,26 +17,21 @@ const App = () => {
   const [header, setHeader] = useState([]);
   const [clients, setClients] = useState([]);
   const [services, setServices] = useState([]);
+  const [language, setLanguage] = useState("ar");
   const loadr = useRef(null);
   useEffect(() => {
     const clientsFetch = async () => {
-      let { data } = await axios.get(
-        "https://el-twyan.onrender.com/api/v1/clients"
-      );
+      let { data } = await axios.get("http://89.116.236.15/api/v1/clients");
       setClients(data.data);
     };
     clientsFetch();
     const sliderFetch = async () => {
-      let { data } = await axios.get(
-        "https://el-twyan.onrender.com/api/v1/slider"
-      );
+      let { data } = await axios.get("http://89.116.236.15/api/v1/slider");
       setHeader(data.data);
     };
     sliderFetch();
     const servicesFetch = async () => {
-      let { data } = await axios.get(
-        "https://el-twyan.onrender.com/api/v1/services"
-      );
+      let { data } = await axios.get("http://89.116.236.15/api/v1/services");
       setServices(data.data);
     };
     servicesFetch();
@@ -44,19 +39,28 @@ const App = () => {
       loadr.current.style.display = "none";
     }, 4700);
   }, []);
+  const handlaLangChange = lang => {
+    setLanguage(lang);
+  };
+  console.log(language);
   return (
     <div className="App">
       <div ref={loadr} className="loader">
         <img src={loader} alt="loader" />
       </div>
       <ToastContainer position="top-right" rtl={true} />
-      <Nav services={services} />
+      <Nav services={services} onChangeLang={handlaLangChange} />
       <div className="app-holder">
         <Routes>
           <Route
             path="/"
             element={
-              <Home slider={header} services={services} clients={clients} />
+              <Home
+                slider={header}
+                lng={language}
+                services={services}
+                clients={clients}
+              />
             }
           />
           <Route

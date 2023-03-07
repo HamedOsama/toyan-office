@@ -123,6 +123,9 @@ body.en .ask_service .ask_descrip ol li {
   font-size: 18px;
   line-height: 28px;
 }
+body.en header .swiper .swiper-slide .decription p {
+  direction: ltr;
+}
 
 nav {
   top: 0;
@@ -312,15 +315,15 @@ header .swiper .swiper-slide img {
      object-fit: cover;
 }
 header .swiper .swiper-slide .decription {
-  width: 340px;
-  height: 80px;
+  width: 360px;
+  height: 100px;
   position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   border-right: 5px solid #a36709;
-  padding: 0 20px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,6 +331,7 @@ header .swiper .swiper-slide .decription {
 header .swiper .swiper-slide .decription p {
   line-height: 30px;
   direction: rtl;
+  text-align: center;
   font-size: 18px;
   color: #ffffff;
 }

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { NavLink, Link } from "react-router-dom";
 
-const Nav = ({ services }) => {
+const Nav = ({ services, onChangeLang }) => {
   const nav = useRef(null);
   const drop = useRef(null);
   const search = useRef(null);
@@ -51,11 +51,13 @@ const Nav = ({ services }) => {
   const handleLang = e => {
     if (lang === "ar") {
       setLang("en");
+      onChangeLang("en");
       e.target.innerHTML = "AR";
       i18next.changeLanguage("en");
       document.querySelector("body").classList.add("en");
     } else {
       setLang("ar");
+      onChangeLang("ar");
       e.target.innerHTML = "En";
       i18next.changeLanguage("ar");
       document.querySelector("body").classList.remove("en");

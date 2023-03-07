@@ -158,6 +158,9 @@ body.en {
     font-size: 18px;
     line-height: 28px;
   }
+  header .swiper .swiper-slide .decription p {
+    direction: ltr;
+  }
 }
 nav {
   top: 0;
@@ -324,19 +327,20 @@ header {
         object-fit: cover;
       }
       .decription {
-        width: 340px;
-        height: 80px;
+        width: 360px;
+        height: 100px;
         position: absolute;
         bottom: 20%;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(0, 0, 0, 0.5);
-        border-right: 5px solid $gold2;
-        padding: 0 20px;
+        border-right: 5px solid #a36709;
+        padding: 0 15px;
         @include centerFlex();
         p {
           line-height: 30px;
           direction: rtl;
+          text-align: center;
           font-size: 18px;
           color: $white;
         }
