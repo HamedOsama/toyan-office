@@ -1324,6 +1324,11 @@ footer {
           left: 50%;
           top: -30px;
           transform: translate(-50%, -50%);
+          border-color: $gold2;
+          color: $gray2;
+          &::placeholder {
+            color: $gray2;
+          }
         }
         button {
           color: $gray2;
@@ -1582,7 +1587,6 @@ footer {
       }
     }
   }
-
   .inner_holder {
     padding: 80px 25px;
     .blogs_grid {

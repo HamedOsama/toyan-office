@@ -1425,6 +1425,14 @@ footer .contact a:hover {
     left: 50%;
     top: -30px;
     transform: translate(-50%, -50%);
+    border-color: #a36709;
+    color: #4c4c4c;
+  }
+  nav.opened .search-lang input::-moz-placeholder {
+    color: #4c4c4c;
+  }
+  nav.opened .search-lang input::placeholder {
+    color: #4c4c4c;
   }
   nav.opened .search-lang button {
     color: #4c4c4c;
