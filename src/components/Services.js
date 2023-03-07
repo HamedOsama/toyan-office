@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import AskService from "./AskService";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const Services = ({ services }) => {
+  const { t } = useTranslation();
   const title = useRef(null);
   // let pathLocation = useParams().name;
   // if (pathLocation === "feasibility-study") {
@@ -14,7 +16,9 @@ const Services = ({ services }) => {
         <div className="image" />
         <div className="path_desc">
           <h2>
-            <span>خدماتنا/</span>
+            <span>
+              {t("ourServices")}
+            </span>
             <p ref={title} />
           </h2>
         </div>

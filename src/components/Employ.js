@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import News from "./News";
+import { useTranslation } from "react-i18next";
 const Employ = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({});
   let headersList = {
     Accept: "/",
@@ -20,12 +22,12 @@ const Employ = () => {
       .request(requestOptions)
       .then(() => {
         document.getElementById("apply_form").reset();
-        toast.success("تم التقديم انتظر الرد قريبًا");
+        toast.success(t("employPage.1"));
       })
       .catch(err => {
         console.error(err);
         document.getElementById("apply_form").reset();
-        toast.error("حاول مره اخرى");
+        toast.error(t("requestForm.10"));
       });
   };
   return (
@@ -34,22 +36,25 @@ const Employ = () => {
         <div className="image" />
         <div className="path_desc">
           <h2>
-            <span>التوظيف/</span>
+            <span>
+              {t("employPage.2")}
+            </span>
             <p>
-              نبحث دائماً عن موظفين على قدرٍ عالٍ من الكفاءة يعملون بجد واجتهاد
-              لتحقيق أفضل النتائج.
+              {t("employPage.3")}
             </p>
           </h2>
         </div>
       </header>
       <section className="employ_form">
-        <h3>قدم على وظيفتك</h3>
+        <h3>
+          {t("employPage.4")}
+        </h3>
         <form id="apply_form" onSubmit={handleSubmit}>
           <input
             required
             type="text"
             name="name"
-            placeholder="الاسم كاملاً"
+            placeholder={t("employPage.5")}
             onChange={e =>
               setFormData({ ...formData, fullName: e.target.value })}
           />
@@ -57,18 +62,20 @@ const Employ = () => {
             required
             type="email"
             name="email"
-            placeholder="البريد الالكتروني"
+            placeholder={t("requestForm.3")}
             onChange={e => setFormData({ ...formData, email: e.target.value })}
           />
           <input
             type="tel"
             name="phone"
-            placeholder="رقم الهاتف"
+            placeholder={t("requestForm.4")}
             required
             onChange={e => setFormData({ ...formData, phone: e.target.value })}
           />
           <div className="file_feild">
-            <p>رفع السيرة الذاتية</p>
+            <p>
+              {t("employPage.6")}
+            </p>
             <input
               required
               type="file"
@@ -82,12 +89,14 @@ const Employ = () => {
           </div>
           <textarea
             name="message"
-            placeholder="رسالة"
+            placeholder={t("requestForm.6")}
             required
             onChange={e =>
               setFormData({ ...formData, message: e.target.value })}
           />
-          <button type="submit">إرسال</button>
+          <button type="submit">
+            {t("requestForm.7")}
+          </button>
         </form>
       </section>
       <News />

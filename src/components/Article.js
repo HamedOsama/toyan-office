@@ -2,7 +2,9 @@ import React from "react";
 import News from "./News";
 import { useParams } from "react-router-dom";
 import blog from "../assets/blog1.jpg";
+import { useTranslation } from "react-i18next";
 const Article = () => {
+  const { t } = useTranslation();
   let { name } = useParams();
   console.log(name);
   return (
@@ -11,7 +13,9 @@ const Article = () => {
         <div className="image" />
         <div className="path_desc">
           <h2>
-            <span>المعرفة/</span>
+            <span>
+              {t("blogPage.1")}
+            </span>
           </h2>
         </div>
       </header>

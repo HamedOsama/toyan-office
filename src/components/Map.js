@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 
 function LocationMarker() {
+  const { t } = useTranslation();
   const [position, setPosition] = useState(null);
   const map = useMap();
   useEffect(
@@ -16,16 +18,26 @@ function LocationMarker() {
   return position === null
     ? null
     : <Marker position={position}>
-        <Popup>موقعك الحالى</Popup>
+        <Popup>
+          {t("contactPage.3")}
+        </Popup>
       </Marker>;
 }
 function Map() {
+  const { t } = useTranslation();
   const [markers, setMarkers] = useState([]);
-  useEffect(() => {
-    setMarkers([
-      { id: 1, name: "مكتب-الطويان", position: [26.42027752758803, 50.08822576048097] },
-    ]);
-  }, []);
+  useEffect(
+    () => {
+      setMarkers([
+        {
+          id: 1,
+          name: t("contactPage.4"),
+          position: [26.42027752758803, 50.08822576048097]
+        }
+      ]);
+    },
+    [t]
+  );
   return (
     <div className="map_layer">
       <MapContainer

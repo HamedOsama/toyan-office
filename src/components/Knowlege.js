@@ -2,17 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import News from "./News";
 import blog from "../assets/blog1.jpg";
+import { useTranslation } from "react-i18next";
 const Knowlege = () => {
+  const { t } = useTranslation();
   return (
     <React.Fragment>
       <header className="know_header">
         <div className="image" />
         <div className="path_desc">
           <h2>
-            <span>المعرفة/</span>
+            <span>
+              {t("blogPage.1")}
+            </span>
             <p>
-              نلتزم بمسؤوليتنا اتجاه رواد الأعمال من خلال تقديم دراسات عالمية
-              حول أكثر القضايا أهمية في مجال الأعمال.
+              {t("blogPage.2")}
             </p>
           </h2>
         </div>

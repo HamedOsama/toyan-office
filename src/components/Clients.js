@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import AskService from "./AskService";
-
+import { useTranslation } from "react-i18next";
 const Clients = ({ clients }) => {
+  const { t } = useTranslation();
   const [start, setStart] = useState(0);
   const [stop, setStop] = useState(12);
   const handleClick = () => {
@@ -16,10 +17,11 @@ const Clients = ({ clients }) => {
         <div className="image" />
         <div className="path_desc">
           <h2>
-            <span>عملاؤنا/</span>
+            <span>
+              {t("clientsPage.1")}
+            </span>
             <p>
-              نهتم بتلبية احتياجات العملاء من خلال تقديم خدمة ذات جودة عالية
-              تمكننا خلق من قيمة دائمة في كل الاتجاهات الممكنة.
+              {t("clientsPage.2")}
             </p>
           </h2>
         </div>

@@ -30,14 +30,42 @@
     "5": "Service Type",
     "6": "Message",
     "7": "Send",
-    "8": "Request has been sent successfully",
+    "8": "Request has been sent",
     "9": "Another service request",
     "10": "Try Again"
   },
   "newsLetter": {
     "1": "Subscribe to the newsletter to receive the best offers from Omar Altowyan's office",
     "2": "Subscribe",
-    "3":"Subscription Succeeded"
+    "3": "Subscription Succeeded"
   },
-  "forContact":"Contacts:"
+  "forContact": "Contacts:",
+  "contactPage": {
+    "1": "Contact Us\\",
+    "2": "We offer specialized and innovative solutions, do not hesitate to contact us",
+    "3": "Your location",
+    "4": "Altowyan's office",
+    "5": "Contact us",
+    "6": "Our address",
+    "7": "Work hours",
+    "8": "Saturday - Thursday",
+    "9": "8:00 am - 8:00 pm"
+  },
+  "blogPage": {
+    "1": "Blogs\\",
+    "2": "We live up to our responsibility towards entrepreneurs by providing global studies on the most important issues in business."
+  },
+  "employPage": {
+    "1": "Submitted, waiting for a response soon",
+    "2": "Recruitment\\",
+    "3": "We are always looking for highly qualified employees who work hard to achieve the best results.",
+    "4": "Apply for your job",
+    "5": "Full Name",
+    "6": "Upload Your CV"
+  },
+  "clientsPage": {
+    "1": "Clients\\",
+    "2": "We care about meeting customers' needs by providing high quality service It enables us to create lasting value in all possible directions."
+  },
+  "ourServices": "Our Services\\"
 }

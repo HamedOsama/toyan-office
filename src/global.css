@@ -119,6 +119,10 @@ body.en footer .footer_grid p {
 body.en footer .footer_grid .services {
   padding: 0 70px;
 }
+body.en .ask_service .ask_descrip ol li {
+  font-size: 18px;
+  line-height: 28px;
+}
 
 nav {
   top: 0;
@@ -1394,6 +1398,13 @@ footer .contact a:hover {
   }
 }
 @media (max-width: 888px) {
+  body.en .about .description {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  body.en .about .description p {
+    line-height: 38px;
+  }
   body.en nav .search-lang input {
     left: 50%;
     top: -30px;
