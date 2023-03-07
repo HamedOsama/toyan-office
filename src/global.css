@@ -24,6 +24,11 @@ a {
   text-decoration: none;
 }
 
+input:focus {
+  outline: none;
+  zoom: 1;
+}
+
 .leaflet-control {
   border-radius: 0;
   border: none;
