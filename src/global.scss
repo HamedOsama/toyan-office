@@ -1525,7 +1525,7 @@ footer {
   .about {
     .about-grid .about-card {
       height: 100%;
-      padding: 50px 15px 25px 15px;
+      padding: 50px 20px 35px 20px;
     }
     .description {
       width: 100%;
@@ -1542,7 +1542,8 @@ footer {
     }
     .about-grid {
       grid-template-columns: repeat(1, 1fr);
-      padding: 40px 25px;
+      padding: 70px 25px;
+      gap: 70px;
     }
   }
   .services {
@@ -1554,6 +1555,9 @@ footer {
   .ask_service {
     padding: 35px;
     gap: 40px;
+    .ask_descrip {
+      padding: 0 15px;
+    }
     .ask_descrip,
     .ask_form {
       width: 100%;

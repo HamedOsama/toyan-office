@@ -1621,7 +1621,7 @@ footer .contact a:hover {
   }
   .about .about-grid .about-card {
     height: 100%;
-    padding: 50px 15px 25px 15px;
+    padding: 50px 20px 35px 20px;
   }
   .about .description {
     width: 100%;
@@ -1638,7 +1638,8 @@ footer .contact a:hover {
   }
   .about .about-grid {
     grid-template-columns: repeat(1, 1fr);
-    padding: 40px 25px;
+    padding: 70px 25px;
+    gap: 70px;
   }
   .services {
     padding: 40px 25px;
@@ -1649,6 +1650,9 @@ footer .contact a:hover {
   .ask_service {
     padding: 35px;
     gap: 40px;
+  }
+  .ask_service .ask_descrip {
+    padding: 0 15px;
   }
   .ask_service .ask_descrip,
   .ask_service .ask_form {

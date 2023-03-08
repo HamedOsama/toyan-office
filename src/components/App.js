@@ -69,9 +69,9 @@ const App = () => {
           />
           <Route path="/clients" element={<Clients clients={clients} />} />
           <Route path="/employment" element={<Employ />} />
-          <Route path="/knowlege" element={<Knowlege />} />
-          <Route path="/knowlege/:name?" element={<Article />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="/knowlege" element={<Knowlege lng={language} />} />
+          <Route path="/knowlege/:name?" element={<Article lng={language} />} />
+          <Route path="contact" element={<Contact lng={language} />} />
         </Routes>
       </div>
       <Footer services={services} />
