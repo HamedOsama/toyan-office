@@ -1794,4 +1794,10 @@ footer .contact a:hover {
   .services_container aside {
     width: 100%;
   }
+  body.en .news form input {
+    border-radius: 15px;
+  }
+  body.en .news form button {
+    border-radius: 15px;
+  }
 }/*# sourceMappingURL=global.css.map */
