@@ -1395,6 +1395,7 @@ footer {
     }
     .wrapper {
       width: 100%;
+      padding-top: 30px;
     }
     .description {
       width: 100%;
@@ -1521,6 +1522,10 @@ footer {
   }
   header .swiper .swiper-slide .decription {
     width: 85%;
+  }
+  header .swiper .swiper-slide .left,
+  .right {
+    display: none;
   }
   .about {
     .about-grid .about-card {
