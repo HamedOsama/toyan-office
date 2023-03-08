@@ -11,7 +11,7 @@ const Employ = () => {
     "Content-Type": "multipart/form-data"
   };
   let requestOptions = {
-    url: "https://el-twyan.onrender.com/api/v1/apply",
+    url: "http://89.116.236.15/api/v1/apply",
     method: "POST",
     headers: headersList,
     data: formData

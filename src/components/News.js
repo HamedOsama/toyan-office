@@ -10,7 +10,7 @@ const News = () => {
     Accept: "/"
   };
   let requestOptions = {
-    url: "https://el-twyan.onrender.com/api/v1/news-letter",
+    url: "http://89.116.236.15/api/v1/news-letter",
     method: "POST",
     headers: headersList,
     data: formData
