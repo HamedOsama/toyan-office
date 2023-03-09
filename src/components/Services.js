@@ -1,15 +1,18 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 import AskService from "./AskService";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 const Services = ({ services, lng }) => {
   const { t } = useTranslation();
-  const title = useRef(null);
-  // let pathLocation = useParams().name;
-  // if (pathLocation === "feasibility-study") {
-  //   console.log("ok");
-  //   title.current.innerHTML = "دراسة جدوى اقتصادية";
-  // }
+  const [serObj, setSerObj] = useState({});
+  let pathLocation = useParams().name;
+  useEffect(
+    () => {
+      setSerObj(services.filter(ser => pathLocation === ser.title.en));
+    },
+    [pathLocation, services]
+  );
   return (
     <React.Fragment>
       <header className="services_header">
@@ -19,7 +22,9 @@ const Services = ({ services, lng }) => {
             <span>
               {t("ourServices")}
             </span>
-            <p ref={title} />
+            <p>
+              {lng === "ar" ? serObj[0]?.title?.ar : serObj[0]?.title?.en}
+            </p>
           </h2>
         </div>
       </header>
@@ -39,11 +44,7 @@ const Services = ({ services, lng }) => {
         </aside>
         <main>
           <p>
-            تعتبر دراسة الجدوى الاقتصـاديــة من الخطوات اللازمة لبدايــة مشروعك،
-            فهي <br /> تمنحك القرار الاستثماري الصحيح.
-          </p>
-          <p>
-            من هذا المنطلق، نسعـى لتقديم دراسات جدوى تفصيلية تدعم نجاح مشروعك.
+          {lng === "ar"?serObj[0]?.description?.ar : serObj[0]?.description?.en}
           </p>
         </main>
       </div>

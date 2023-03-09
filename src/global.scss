@@ -632,9 +632,12 @@ header {
   padding: 75px 120px;
   display: flex;
   gap: 80px;
+  main {
+    width: 65%;
+  }
   aside {
-    width: 300px;
-    height: 350px;
+    width: 35%;
+    height: 100%;
     box-shadow: $shadow;
     padding: 14px 24px;
     border-radius: 10px;
@@ -1703,6 +1706,9 @@ footer {
     padding: 60px 25px;
     gap: 40px;
     aside {
+      width: 100%;
+    }
+    main {
       width: 100%;
     }
   }

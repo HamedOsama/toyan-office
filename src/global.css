@@ -638,9 +638,12 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   display: flex;
   gap: 80px;
 }
+.services_container main {
+  width: 65%;
+}
 .services_container aside {
-  width: 300px;
-  height: 350px;
+  width: 35%;
+  height: 100%;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
   padding: 14px 24px;
   border-radius: 10px;
@@ -1802,6 +1805,9 @@ footer .contact a:hover {
     gap: 40px;
   }
   .services_container aside {
+    width: 100%;
+  }
+  .services_container main {
     width: 100%;
   }
   body.en .news form input {
