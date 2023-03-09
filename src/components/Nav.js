@@ -78,7 +78,7 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
         </li>
         <li className="nav-item">
           <NavLink
-            to={`/services/`}
+            to={`/services/${ser1?.title?.en}`}
             onMouseMove={handlemove}
             onMouseLeave={handleLeave}
             onClick={handleToggle}

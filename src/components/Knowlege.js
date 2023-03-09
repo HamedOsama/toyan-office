@@ -26,7 +26,7 @@ const Knowlege = () => {
             <img src={blog} alt="blog1" />
             <div className="laer">
               <h4>أهمية الوقت في خطة العمل</h4>
-              <Link to="/knowlege/time-importance">{`اقرأ المزيد <<`}</Link>
+              <Link to="/knowlege/time-importance">{t("read")}</Link>
               <span className="line" />
               <span className="date">10 - فبراير - 2023</span>
             </div>

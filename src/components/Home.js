@@ -121,15 +121,19 @@ const Home = ({ slider, services, clients, lng }) => {
                 to={`/services/${ser.title.en}`}
               >
                 <div className="img">
-                  <img loading="lazy" src={ser.image} alt={ser.title.en} />
+                  <img
+                    loading="lazy"
+                    src={`http://89.116.236.15/images/${ser.image}`}
+                    alt={ser.title.en}
+                  />
                   <div className="img_layer">
                     <p>
-                      {ser.subTitle.ar}
+                      {lng === "ar" ? ser.subTitle.ar : ser.subTitle.en}
                     </p>
                   </div>
                 </div>
                 <pre>
-                  {ser.title.ar}
+                  {lng === "ar" ? ser.title.ar : ser.title.en}
                 </pre>
               </Link>
             );
