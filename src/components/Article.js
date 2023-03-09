@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import News from "./News";
 import { useParams } from "react-router-dom";
 import blog from "../assets/blog1.jpg";
 import { useTranslation } from "react-i18next";
-const Article = () => {
+const Article = ({ blogs, lng }) => {
+  const [blogObj, setBlogObj] = useState({});
   const { t } = useTranslation();
   let { name } = useParams();
-  console.log(name);
+  useEffect(
+    () => {
+      setBlogObj(blogs.filter(bl => name === bl.title.en));
+    },
+    [name, blogs]
+  );
   return (
     <React.Fragment>
       <header className="know_header">
@@ -16,19 +22,17 @@ const Article = () => {
             <span>
               {t("blogPage.1")}
             </span>
+            <p>
+              {lng === "ar" ? blogObj[0]?.title?.ar : blogObj[0]?.title?.en}
+            </p>
           </h2>
         </div>
       </header>
       <div className="blog_holder">
         <div className="article_description">
-          <h3>أهمية الوقت في خطة العمل</h3>
+          <h3>{lng === "ar" ? blogObj[0]?.title?.ar : blogObj[0]?.title?.en}</h3>
           <article>
-            أهمية الوقت في خطة العمل, أهمية الوقت في خطة العمل, أهمية الوقتأهمية
-            الوقت في خطة العمل, أهمية الوقت في خطة العمل, أهمية الوقتأهمية الوقت
-            في خطة العمل, أهمية الوقت في خطة العمل,أهمية الوقت في خطة العمل,
-            أهمية الوقت في خطة العمل, أهمية الوقتأهمية الوقت في خطة العمل, أهمية
-            الوقت في خطة العمل,أهمية الوقت في خطة العمل, أهمية الوقت في خطة
-            العمل, أهمية الوقت في خطة العمل,
+          {lng === "ar" ? blogObj[0]?.description?.ar : blogObj[0]?.description?.en}
           </article>
         </div>
         <div className="article_img">

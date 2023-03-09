@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
+  const [blogs, setBlogs] = useState([]);
   const [header, setHeader] = useState([]);
   const [clients, setClients] = useState([]);
   const [contacts, setContacts] = useState([]);
@@ -41,6 +42,11 @@ const App = () => {
       setServices(data.data);
     };
     servicesFetch();
+    const blogsFetch = async () => {
+      let { data } = await axios.get("http://89.116.236.15/api/v1/blogs");
+      setBlogs(data.data);
+    };
+    blogsFetch();
     setTimeout(() => {
       loadr.current.style.display = "none";
     }, 4700);
@@ -78,8 +84,14 @@ const App = () => {
           />
           <Route path="/clients" element={<Clients clients={clients} />} />
           <Route path="/employment" element={<Employ />} />
-          <Route path="/knowlege" element={<Knowlege lng={language} />} />
-          <Route path="/knowlege/:name?" element={<Article lng={language} />} />
+          <Route
+            path="/knowlege"
+            element={<Knowlege lng={language} blogs={blogs} />}
+          />
+          <Route
+            path="/knowlege/:name?"
+            element={<Article lng={language} blogs={blogs} />}
+          />
           <Route
             path="contact"
             element={<Contact lng={language} contacts={contacts} />}

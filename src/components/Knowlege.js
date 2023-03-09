@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import News from "./News";
-import blog from "../assets/blog1.jpg";
 import { useTranslation } from "react-i18next";
-const Knowlege = () => {
+const Knowlege = ({ blogs, lng }) => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
@@ -22,15 +21,28 @@ const Knowlege = () => {
       </header>
       <div className="inner_holder">
         <section className="blogs_grid">
-          <div className="blog">
-            <img src={blog} alt="blog1" />
-            <div className="laer">
-              <h4>أهمية الوقت في خطة العمل</h4>
-              <Link to="/knowlege/time-importance">{t("read")}</Link>
-              <span className="line" />
-              <span className="date">10 - فبراير - 2023</span>
-            </div>
-          </div>
+          {blogs.map(b => {
+            return (
+              <div key={b._id} className="blog">
+                <img
+                  src={`http://89.116.236.15/images/${b.image}`}
+                  alt={b._id}
+                />
+                <div className="laer">
+                  <h4>
+                    {lng === "ar" ? b.title.ar : b.title.en}
+                  </h4>
+                  <Link to={`/knowlege/${b.title.en}`}>
+                    {t("read")}
+                  </Link>
+                  <span className="line" />
+                  <span className="date">
+                    {b.createdAt.slice(0, b.createdAt.indexOf("T"))}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </section>
       </div>
       <News />

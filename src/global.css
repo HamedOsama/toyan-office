@@ -927,8 +927,11 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
 }
 .inner_holder .blogs_grid .blog .laer {
   width: 100%;
-  height: 110px;
+  height: 120px;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: 0 20px;
@@ -936,9 +939,8 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
 .inner_holder .blogs_grid .blog .laer h4 {
   font-size: 20px;
   font-weight: 500;
-  line-height: 37px;
+  line-height: 26px;
   color: #ffffff;
-  text-align: center;
   padding-top: 10px;
 }
 .inner_holder .blogs_grid .blog .laer a {
