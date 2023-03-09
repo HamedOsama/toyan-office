@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/footer_logo.png";
 import { useTranslation } from "react-i18next";
-const Footer = ({ services, lng }) => {
+const Footer = ({ services, lng, contacts }) => {
   const { t } = useTranslation();
   return (
     <footer>
@@ -40,11 +40,17 @@ const Footer = ({ services, lng }) => {
         <h4>
           {t("forContact")}
         </h4>
-        <a href="tel:+055 0109 595">055 0109 595</a>
-        <a href="tel:+920 009 685">920 009 685</a>
-        <a href="mailto:Omaraltowyan@gmail.com">Omaraltowyan@gmail.com</a>
+        <a href={`tel:+${contacts.mainPhone}`}>
+          +{contacts.mainPhone}
+        </a>
+        <a href={`tel:+${contacts.subPhone}`}>
+          +{contacts.subPhone}
+        </a>
+        <a href={`mailto:${contacts.email}`}>
+          {contacts.email}
+        </a>
         <p>
-          المنطقة الشرقية ، الدمام <br /> المملكة العربية السعودية
+          {lng === "ar" ? contacts?.address?.ar : contacts?.address?.en}
         </p>
       </div>
     </footer>

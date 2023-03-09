@@ -1080,6 +1080,7 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   line-height: 30px;
   color: #4c4c4c;
   text-align: center;
+  width: 200px;
 }
 
 /* *****footer-start*** */
@@ -1138,6 +1139,9 @@ footer .line {
   height: 1px;
   margin: 20px 0;
   background-color: #ffffff;
+}
+footer .contact p {
+  width: 200px;
 }
 footer .contact {
   display: flex;
@@ -1411,6 +1415,12 @@ footer .contact a:hover {
     left: 50%;
     top: -30px;
     transform: translate(-50%, -50%);
+  }
+  body.en footer .footer_grid .col {
+    padding: 0;
+  }
+  body.en footer .footer_grid .services {
+    padding: 0;
   }
   nav {
     padding: 10px 60px;

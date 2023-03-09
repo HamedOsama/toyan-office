@@ -4,7 +4,7 @@ import Map from "./Map";
 import RequestForm from "./RequestForm";
 import { useTranslation } from "react-i18next";
 
-const Contact = () => {
+const Contact = ({ contacts, lng }) => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
@@ -32,16 +32,22 @@ const Contact = () => {
           <h4>
             {t("contactPage.5")}
           </h4>
-          <a href="mailto:Omaraltowyan@gmail.com">Omaraltowyan@gmail.com</a>
-          <a href="tel:+055 0109 595">+055 0109 595</a>
-          <a href="tel:+920 009 685">+920 009 685</a>
+          <a href={`tel:+${contacts.mainPhone}`}>
+            +{contacts.mainPhone}
+          </a>
+          <a href={`tel:+${contacts.subPhone}`}>
+            +{contacts.subPhone}
+          </a>
+          <a href={`mailto:${contacts.email}`}>
+            {contacts.email}
+          </a>
         </div>
         <div className="info_card">
           <h4>
             {t("contactPage.6")}
           </h4>
           <p>
-            المنطقة الشرقية ، الدمام، <br /> المملكة العربية السعودية
+            {lng === "ar" ? contacts?.address?.ar : contacts?.address?.en}
           </p>
         </div>
         <div className="info_card">

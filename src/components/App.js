@@ -16,6 +16,7 @@ import { Routes, Route } from "react-router-dom";
 const App = () => {
   const [header, setHeader] = useState([]);
   const [clients, setClients] = useState([]);
+  const [contacts, setContacts] = useState([]);
   const [services, setServices] = useState([]);
   const [language, setLanguage] = useState("ar");
   const loadr = useRef(null);
@@ -25,6 +26,11 @@ const App = () => {
       setClients(data.data);
     };
     clientsFetch();
+    const ContactFetch = async () => {
+      let { data } = await axios.get("http://89.116.236.15/api/v1/contacts");
+      setContacts(data.data);
+    };
+    ContactFetch();
     const sliderFetch = async () => {
       let { data } = await axios.get("http://89.116.236.15/api/v1/slider");
       setHeader(data.data);
@@ -74,10 +80,13 @@ const App = () => {
           <Route path="/employment" element={<Employ />} />
           <Route path="/knowlege" element={<Knowlege lng={language} />} />
           <Route path="/knowlege/:name?" element={<Article lng={language} />} />
-          <Route path="contact" element={<Contact lng={language} />} />
+          <Route
+            path="contact"
+            element={<Contact lng={language} contacts={contacts} />}
+          />
         </Routes>
       </div>
-      <Footer services={services} lng={language} />
+      <Footer services={services} contacts={contacts} lng={language} />
     </div>
   );
 };
