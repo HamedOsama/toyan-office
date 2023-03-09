@@ -31,24 +31,6 @@ const Knowlege = () => {
               <span className="date">10 - فبراير - 2023</span>
             </div>
           </div>
-          <div className="blog">
-            <img src={blog} alt="blog1" />
-            <div className="laer">
-              <h4>أهمية الوقت في خطة العمل</h4>
-              <Link to="/knowlege/time-importance">{`اقرأ المزيد <<`}</Link>
-              <span className="line" />
-              <span className="date">10 - فبراير - 2023</span>
-            </div>
-          </div>
-          <div className="blog">
-            <img src={blog} alt="blog1" />
-            <div className="laer">
-              <h4>أهمية الوقت في خطة العمل</h4>
-              <Link to="/knowlege/time-importance">{`اقرأ المزيد <<`}</Link>
-              <span className="line" />
-              <span className="date">10 - فبراير - 2023</span>
-            </div>
-          </div>
         </section>
       </div>
       <News />

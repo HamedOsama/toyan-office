@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { NavLink, Link } from "react-router-dom";
 
-const Nav = ({ services, onChangeLang }) => {
+const Nav = ({ services, onChangeLang, ser1 }) => {
   const nav = useRef(null);
   const drop = useRef(null);
   const search = useRef(null);
@@ -97,7 +97,7 @@ const Nav = ({ services, onChangeLang }) => {
                 return (
                   <li key={ser._id}>
                     <Link to={`/services/${ser.title.en}`}>
-                      {ser.title.ar}
+                      {lang === "ar" ? ser.title.ar : ser.title.en}
                     </Link>
                   </li>
                 );

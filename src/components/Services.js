@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import AskService from "./AskService";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-const Services = ({ services }) => {
+const Services = ({ services, lng }) => {
   const { t } = useTranslation();
   const title = useRef(null);
   // let pathLocation = useParams().name;
@@ -30,7 +30,7 @@ const Services = ({ services }) => {
               return (
                 <li key={ser._id}>
                   <NavLink to={`/services/${ser.title.en}`}>
-                    {ser.title.ar}
+                    {lng === "ar" ? ser.title.ar : ser.title.en}
                   </NavLink>
                 </li>
               );

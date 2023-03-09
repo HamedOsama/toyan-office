@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/footer_logo.png";
 import { useTranslation } from "react-i18next";
-const Footer = ({ services }) => {
+const Footer = ({ services, lng }) => {
   const { t } = useTranslation();
   return (
     <footer>
@@ -27,7 +27,7 @@ const Footer = ({ services }) => {
               return (
                 <li key={ser._id}>
                   <Link to={`/services/${ser.title.en} `}>
-                    {ser.title.ar}
+                    {lng === "ar" ? ser.title.ar : ser.title.en}
                   </Link>
                 </li>
               );
@@ -44,7 +44,7 @@ const Footer = ({ services }) => {
         <a href="tel:+920 009 685">920 009 685</a>
         <a href="mailto:Omaraltowyan@gmail.com">Omaraltowyan@gmail.com</a>
         <p>
-          المنطقة الشرقية ، الدمام، <br /> المملكة العربية السعودية
+          المنطقة الشرقية ، الدمام <br /> المملكة العربية السعودية
         </p>
       </div>
     </footer>

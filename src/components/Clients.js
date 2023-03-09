@@ -30,7 +30,10 @@ const Clients = ({ clients }) => {
         {clients.slice(start, stop).map(client => {
           return (
             <div className="client_card" loading="lazy" key={client._id}>
-              <img src={client.image} alt={client.title} />
+              <img
+                src={`http://89.116.236.15/images/${client.image}`}
+                alt={client.name}
+              />
             </div>
           );
         })}

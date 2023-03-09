@@ -167,7 +167,7 @@ const Home = ({ slider, services, clients, lng }) => {
                 <img
                   loading="lazy"
                   src={`http://89.116.236.15/images/${client.image}`}
-                  alt={client.title}
+                  alt={client.name}
                 />
               </SwiperSlide>
             );

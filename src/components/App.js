@@ -42,14 +42,17 @@ const App = () => {
   const handlaLangChange = lang => {
     setLanguage(lang);
   };
-  console.log(language);
   return (
     <div className="App">
       <div ref={loadr} className="loader">
         <img src={loader} alt="loader" />
       </div>
       <ToastContainer position="top-right" rtl={true} />
-      <Nav services={services} onChangeLang={handlaLangChange} />
+      <Nav
+        services={services}
+        ser1={services[0]}
+        onChangeLang={handlaLangChange}
+      />
       <div className="app-holder">
         <Routes>
           <Route
@@ -65,7 +68,7 @@ const App = () => {
           />
           <Route
             path="/services/:name?"
-            element={<Services services={services} />}
+            element={<Services lng={language} services={services} />}
           />
           <Route path="/clients" element={<Clients clients={clients} />} />
           <Route path="/employment" element={<Employ />} />
@@ -74,7 +77,7 @@ const App = () => {
           <Route path="contact" element={<Contact lng={language} />} />
         </Routes>
       </div>
-      <Footer services={services} />
+      <Footer services={services} lng={language} />
     </div>
   );
 };
