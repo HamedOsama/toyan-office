@@ -13,6 +13,10 @@ const Services = ({ services, lng }) => {
     },
     [pathLocation, services]
   );
+  let sentencesAR = serObj[0]?.description?.ar?.split(/[.,:]/);
+  sentencesAR?.pop();
+  let sentencesEN = serObj[0]?.description?.en?.split(/[.,:]/);
+  sentencesEN?.pop();
   return (
     <React.Fragment>
       <header className="services_header">
@@ -43,9 +47,13 @@ const Services = ({ services, lng }) => {
           </ul>
         </aside>
         <main>
-          <p>
-          {lng === "ar"?serObj[0]?.description?.ar : serObj[0]?.description?.en}
-          </p>
+          <ul>
+          {lng === "ar"? sentencesAR?.map(sen=>{
+            return(<li key={sen}>{sen}.</li>)
+          }) : sentencesEN?.map(sen=>{
+            return(<li key={sen}>{sen}.</li>)
+          })}
+          </ul>
         </main>
       </div>
       <AskService />
