@@ -14,8 +14,10 @@ import me from "../assets/me.png";
 import la from "../assets/la.png";
 import about from "../assets/about.png";
 
-const Home = ({ slider, services, clients, lng }) => {
+const Home = ({ slider, services, clients, lng, info }) => {
   const { t } = useTranslation();
+  let sentencesAR = info[3]?.description?.ar?.split("\n");
+  let sentencesEN = info[3]?.description?.en?.split("\n");
   return (
     <React.Fragment>
       <header className="header-slider">
@@ -60,7 +62,7 @@ const Home = ({ slider, services, clients, lng }) => {
               {t("CompanyTitle")}
             </h1>
             <p>
-              {t("aboutDesc")}
+              {lng === "ar" ? info[0]?.description?.ar : info[0]?.description?.en}
             </p>
           </div>
           <div className="wrapper">
@@ -76,10 +78,7 @@ const Home = ({ slider, services, clients, lng }) => {
               {t("vision")}
             </h2>
             <p className="cen">
-              مكتب إقليمي رائد فـي الاستشــارات الإداريــة والتطوير يرشد قرارات
-              المستفيدين بآراء الخبراء والوصول إلــى المفهوم الشــامــل لخدمــات
-              الاستشـارات والحـلول الإداريــة والاستشـاريــة المبنية علـى الخبرة
-              وتقديم أفضل الممارسات العالمية.
+              {lng === "ar" ? info[1]?.description?.ar : info[1]?.description?.en}
             </p>
           </div>
           <div className="about-card">
@@ -90,8 +89,7 @@ const Home = ({ slider, services, clients, lng }) => {
               {t("message")}
             </h2>
             <p className="cen-p">
-              تقديم خدمات تدريبية، واستشارات إدارية احترافية، وحلول إبداعية
-              بجودة عالمية.
+            {lng === "ar" ? info[2]?.description?.ar : info[2]?.description?.en}
             </p>
           </div>
           <div className="about-card">
@@ -101,10 +99,13 @@ const Home = ({ slider, services, clients, lng }) => {
             <h2>
               {t("value")}
             </h2>
-            <p className="cen-p">
-              الالتزام والمسؤولية <br /> الأمانة والمصداقية <br /> الجودة
-              والمهنية
-            </p>
+            <ul className="cen-p">
+          {lng === "ar"? sentencesAR?.map(sen=>{
+            return(<li key={sen}>{sen}</li>)
+          }) : sentencesEN?.map(sen=>{
+            return(<li key={sen}>{sen}</li>)
+          })}
+          </ul>
           </div>
         </div>
       </section>

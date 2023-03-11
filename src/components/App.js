@@ -19,6 +19,7 @@ const App = () => {
   const [clients, setClients] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [services, setServices] = useState([]);
+  const [aboutInfo, setAboutInfo] = useState([]);
   const [language, setLanguage] = useState("ar");
   const loadr = useRef(null);
   useEffect(() => {
@@ -27,6 +28,11 @@ const App = () => {
       setClients(data.data);
     };
     clientsFetch();
+    const AboutFetch = async () => {
+      let { data } = await axios.get("http://89.116.236.15/api/v1/information");
+      setAboutInfo(data.data);
+    };
+    AboutFetch();
     const ContactFetch = async () => {
       let { data } = await axios.get("http://89.116.236.15/api/v1/contacts");
       setContacts(data.data);
@@ -75,6 +81,7 @@ const App = () => {
                 lng={language}
                 services={services}
                 clients={clients}
+                info={aboutInfo}
               />
             }
           />
