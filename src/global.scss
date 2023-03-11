@@ -263,6 +263,20 @@ nav {
     justify-content: flex-end;
     gap: 8px;
     position: relative;
+    .search_box {
+      top: 75px;
+      left: 82px;
+      width: 200px;
+      height: 100px;
+      background: $white;
+      position: absolute;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      p {
+        color: $gold2;
+      }
+    }
     input {
       height: 24px;
       width: 0;

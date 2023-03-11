@@ -3,16 +3,19 @@ import Logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { NavLink, Link } from "react-router-dom";
+import axios from "axios";
 
 const Nav = ({ services, onChangeLang, ser1 }) => {
   const nav = useRef(null);
   const drop = useRef(null);
   const search = useRef(null);
   const navBtn = useRef(null);
+  const box = useRef(null);
   const { t } = useTranslation();
   const [lang, setLang] = useState("ar");
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [searchRes, setSearchRes] = useState([]);
   const handlemove = () => {
     drop.current.style.height = "270px";
   };
@@ -63,6 +66,18 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
       document.querySelector("body").classList.remove("en");
     }
   };
+  const handleSearch = async e => {
+    let { data } = await axios.get(
+      `http://89.116.236.15/api/v1/services/search/:${e.target.value}`
+    );
+    setSearchRes(data.data);
+  };
+  const focus = () => {
+    box.current.style.display = "flex";
+  };
+  const blur = () => {
+    box.current.style.display = "none";
+  };
   return (
     <nav ref={nav}>
       <div className="logo">
@@ -78,7 +93,6 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
         </li>
         <li className="nav-item">
           <NavLink
-            to={`/services/${ser1?.title?.en}`}
             onMouseMove={handlemove}
             onMouseLeave={handleLeave}
             onClick={handleToggle}
@@ -130,7 +144,17 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
         <i ref={navBtn} className="fas fa-bars" />
       </div>
       <div className="search-lang">
-        <input type="text" placeholder={t("search")} ref={search} />
+        <input
+          type="text"
+          placeholder={t("search")}
+          ref={search}
+          onChange={handleSearch}
+          onFocus={focus}
+          onBlur={blur}
+        />
+        <div className="search_box" ref={box}>
+        {searchRes.length === 0? <p>Not Found</p> : <p>hello</p>}
+        </div>
         <button onClick={handleclick}>
           <i className="fa-solid fa-magnifying-glass" />
         </button>
@@ -142,3 +166,4 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
 };
 
 export default Nav;
+//to={`/services/${ser1?.title?.en}`}

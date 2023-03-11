@@ -239,6 +239,20 @@ nav .search-lang {
   gap: 8px;
   position: relative;
 }
+nav .search-lang .search_box {
+  top: 75px;
+  left: 82px;
+  width: 200px;
+  height: 100px;
+  background: #ffffff;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+nav .search-lang .search_box p {
+  color: #a36709;
+}
 nav .search-lang input {
   height: 24px;
   width: 0;
