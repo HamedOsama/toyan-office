@@ -516,6 +516,7 @@ header {
           position: absolute;
           top: 0;
           left: 0;
+          overflow: hidden;
           @include centerFlex();
           padding: 0 50px;
           opacity: 0;

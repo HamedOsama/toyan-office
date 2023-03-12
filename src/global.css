@@ -515,6 +515,7 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
