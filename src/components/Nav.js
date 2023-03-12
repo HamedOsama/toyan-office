@@ -68,7 +68,7 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
   };
   const handleSearch = async e => {
     let { data } = await axios.get(
-      `http://89.116.236.15/api/v1/services/search/:${e.target.value}`
+      `https://test.dummydealer.com/api/v1/services/search/:${e.target.value}`
     );
     setSearchRes(data.data);
   };
@@ -93,6 +93,7 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
         </li>
         <li className="nav-item">
           <NavLink
+            to={`/services/${ser1?.title?.en}`}
             onMouseMove={handlemove}
             onMouseLeave={handleLeave}
             onClick={handleToggle}
@@ -166,4 +167,4 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
 };
 
 export default Nav;
-//to={`/services/${ser1?.title?.en}`}
+

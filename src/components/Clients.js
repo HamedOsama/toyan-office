@@ -31,7 +31,7 @@ const Clients = ({ clients }) => {
           return (
             <div className="client_card" loading="lazy" key={client._id}>
               <img
-                src={`http://89.116.236.15/images/${client.image}`}
+                src={`https://test.dummydealer.com/images/${client.image}`}
                 alt={client.name}
               />
             </div>

@@ -36,7 +36,7 @@ const Home = ({ slider, services, clients, lng, info }) => {
             return (
               <SwiperSlide key={slide._id}>
                 <img
-                  src={`http://89.116.236.15/images/${slide.image}`}
+                  src={`https://test.dummydealer.com/images/${slide.image}`}
                   alt={slide._id}
                 />
                 <div className="layer" />
@@ -124,7 +124,7 @@ const Home = ({ slider, services, clients, lng, info }) => {
                 <div className="img">
                   <img
                     loading="lazy"
-                    src={`http://89.116.236.15/images/${ser.image}`}
+                    src={`https://test.dummydealer.com/images/${ser.image}`}
                     alt={ser.title.en}
                   />
                   <div className="img_layer">
@@ -171,7 +171,7 @@ const Home = ({ slider, services, clients, lng, info }) => {
               <SwiperSlide className="swiper_card" key={client._id}>
                 <img
                   loading="lazy"
-                  src={`http://89.116.236.15/images/${client.image}`}
+                  src={`https://test.dummydealer.com/images/${client.image}`}
                   alt={client.name}
                 />
               </SwiperSlide>
