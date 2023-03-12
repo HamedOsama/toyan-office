@@ -10,7 +10,7 @@ const News = () => {
     Accept: "/"
   };
   let requestOptions = {
-    url: "https://test.dummydealer.com/api/v1/news-letter",
+    url: "https://api.tawyanoffice.com/api/v1/news-letter",
     method: "POST",
     headers: headersList,
     data: formData

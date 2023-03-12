@@ -24,32 +24,32 @@ const App = () => {
   const loadr = useRef(null);
   useEffect(() => {
     const clientsFetch = async () => {
-      let { data } = await axios.get("https://test.dummydealer.com/api/v1/clients");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/clients");
       setClients(data.data);
     };
     clientsFetch();
     const AboutFetch = async () => {
-      let { data } = await axios.get("https://test.dummydealer.com/api/v1/information");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/information");
       setAboutInfo(data.data);
     };
     AboutFetch();
     const ContactFetch = async () => {
-      let { data } = await axios.get("https://test.dummydealer.com/api/v1/contacts");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/contacts");
       setContacts(data.data);
     };
     ContactFetch();
     const sliderFetch = async () => {
-      let { data } = await axios.get("https://test.dummydealer.com/api/v1/slider");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/slider");
       setHeader(data.data);
     };
     sliderFetch();
     const servicesFetch = async () => {
-      let { data } = await axios.get("https://test.dummydealer.com/api/v1/services");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/services");
       setServices(data.data);
     };
     servicesFetch();
     const blogsFetch = async () => {
-      let { data } = await axios.get("https://test.dummydealer.com/api/v1/blogs");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/blogs");
       setBlogs(data.data);
     };
     blogsFetch();

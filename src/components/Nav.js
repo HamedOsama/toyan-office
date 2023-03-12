@@ -68,7 +68,7 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
   };
   const handleSearch = async e => {
     let { data } = await axios.get(
-      `https://test.dummydealer.com/api/v1/services/search/:${e.target.value}`
+      `https://api.tawyanoffice.com/api/v1/services/search/:${e.target.value}`
     );
     setSearchRes(data.data);
   };

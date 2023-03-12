@@ -36,7 +36,7 @@ const Article = ({ blogs, lng }) => {
           </article>
         </div>
         <div className="article_img">
-          <img src={`https://test.dummydealer.com/images/${blogObj[0]?.image}`}
+          <img src={`https://api.tawyanoffice.com/images/${blogObj[0]?.image}`}
           alt={blogObj[0]?._id} />
         </div>
       </div>

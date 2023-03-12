@@ -25,7 +25,7 @@ const Knowlege = ({ blogs, lng }) => {
             return (
               <div key={b._id} className="blog">
                 <img
-                  src={`https://test.dummydealer.com/images/${b.image}`}
+                  src={`https://api.tawyanoffice.com/images/${b.image}`}
                   alt={b._id}
                 />
                 <div className="laer">
