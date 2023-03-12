@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import News from "./News";
 import { useParams } from "react-router-dom";
-import blog from "../assets/blog1.jpg";
 import { useTranslation } from "react-i18next";
+
 const Article = ({ blogs, lng }) => {
   const [blogObj, setBlogObj] = useState({});
   const { t } = useTranslation();
@@ -36,7 +36,8 @@ const Article = ({ blogs, lng }) => {
           </article>
         </div>
         <div className="article_img">
-          <img src={blog} alt="blog" />
+          <img src={`https://test.dummydealer.com/images/${blogObj[0]?.image}`}
+          alt={blogObj[0]?._id} />
         </div>
       </div>
       <News />
