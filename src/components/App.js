@@ -24,7 +24,7 @@ const App = () => {
   const loadr = useRef(null);
   useEffect(() => {
     const clientsFetch = async () => {
-      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/clients");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/client");
       setClients(data.data);
     };
     clientsFetch();
@@ -44,12 +44,12 @@ const App = () => {
     };
     sliderFetch();
     const servicesFetch = async () => {
-      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/services");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/service");
       setServices(data.data);
     };
     servicesFetch();
     const blogsFetch = async () => {
-      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/blogs");
+      let { data } = await axios.get("https://api.tawyanoffice.com/api/v1/blog");
       setBlogs(data.data);
     };
     blogsFetch();
