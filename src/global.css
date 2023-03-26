@@ -605,6 +605,13 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   align-items: center;
   justify-content: center;
 }
+.clients .mySwiper .swiper_card img {
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .clients .mySwiper .swiper-button-next::after,
 .clients .mySwiper .swiper-button-prev::after {
   background: linear-gradient(267.28deg, #f1b048 -27.68%, #a36709 129.01%);
@@ -733,6 +740,11 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
 .clients_gird .client_card img {
   transition: all 0.5s ease-in-out;
   filter: grayscale(1);
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .clients_gird .client_card:hover img {
   filter: grayscale(0);
