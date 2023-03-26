@@ -154,7 +154,7 @@ const Nav = ({ services, onChangeLang, ser1 }) => {
           onBlur={blur}
         />
         <div className="search_box" ref={box}>
-        {searchRes.length === 0? <p>Not Found</p> : <p>hello</p>}
+        {searchRes?.length === 0? <p>Not Found</p> : <p>hello</p>}
         </div>
         <button onClick={handleclick}>
           <i className="fa-solid fa-magnifying-glass" />

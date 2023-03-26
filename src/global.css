@@ -76,6 +76,10 @@ input:focus {
 body.en {
   direction: ltr;
 }
+body.en .ask_service {
+  padding-left: 0;
+  padding-right: 120px;
+}
 body.en .about .wrapper img {
   transform: rotateY(180deg);
 }
@@ -118,10 +122,6 @@ body.en footer .footer_grid p {
 }
 body.en footer .footer_grid .services {
   padding: 0 70px;
-}
-body.en .ask_service .ask_descrip ol li {
-  font-size: 18px;
-  line-height: 28px;
 }
 body.en header .swiper .swiper-slide .decription p {
   direction: ltr;
@@ -549,7 +549,7 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   background-position: 50% 80%;
   display: flex;
   gap: 90px;
-  padding: 30px 120px;
+  padding-left: 120px;
 }
 .ask_service h3 {
   color: #ffffff;
@@ -560,12 +560,10 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
 }
 .ask_service .ask_descrip {
   width: calc(50% - 20px);
+  height: 100%;
 }
-.ask_service .ask_descrip ol li {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 8px;
+.ask_service .ask_descrip .map_layer {
+  height: inherit;
 }
 .ask_service .ask_form {
   width: calc(50% - 70px);
@@ -573,6 +571,7 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  padding: 30px 0;
 }
 .ask_service .ask_form form input,
 .ask_service .ask_form form textarea {
@@ -604,6 +603,13 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.clients .mySwiper .swiper_card img {
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .clients .mySwiper .swiper-button-next::after,
 .clients .mySwiper .swiper-button-prev::after {
@@ -733,6 +739,11 @@ header .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagin
 .clients_gird .client_card img {
   transition: all 0.5s ease-in-out;
   filter: grayscale(1);
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .clients_gird .client_card:hover img {
   filter: grayscale(0);
@@ -1337,6 +1348,9 @@ footer .contact a:hover {
   body.en .about .description {
     padding-left: 50px;
   }
+  body.en .ask_service {
+    padding-right: 50px;
+  }
   nav {
     padding: 10px 50px;
   }
@@ -1367,15 +1381,11 @@ footer .contact a:hover {
     gap: 45px;
   }
   .ask_service {
-    padding: 30px 50px;
+    padding-left: 50px;
     gap: 40px;
   }
   .ask_service .ask_form {
     width: calc(50% - 20px);
-  }
-  .ask_service .ask_descrip ol li {
-    font-size: 18px;
-    line-height: 30px;
   }
   .news {
     padding: 100px;
@@ -1429,6 +1439,9 @@ footer .contact a:hover {
   }
 }
 @media (max-width: 888px) {
+  body.en .ask_service {
+    padding: 0;
+  }
   body.en .about .description {
     padding: 0 30px;
   }
@@ -1550,7 +1563,7 @@ footer .contact a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .ask_service {
-    padding: 40px 60px;
+    padding: 0;
     height: 100%;
     flex-direction: column;
     gap: 40px;
@@ -1559,6 +1572,12 @@ footer .contact a:hover {
   .ask_service .ask_form {
     width: 100%;
     align-items: self-start;
+  }
+  .ask_service .ask_form {
+    padding: 40px 60px;
+  }
+  .ask_service .ask_descrip {
+    height: 600px;
   }
   .clients {
     padding: 40px;
@@ -1687,21 +1706,15 @@ footer .contact a:hover {
     grid-template-columns: repeat(1, 1fr);
   }
   .ask_service {
-    padding: 35px;
+    padding: 0;
     gap: 40px;
-  }
-  .ask_service .ask_descrip {
-    padding: 0 15px;
   }
   .ask_service .ask_descrip,
   .ask_service .ask_form {
     width: 100%;
   }
-  .ask_service .ask_descrip ol li,
-  .ask_service .ask_form ol li {
-    font-size: 16px;
-    margin-top: 0;
-    line-height: 30px;
+  .ask_service .ask_form {
+    padding: 30px 35px;
   }
   .clients {
     padding: 40px 20px;
