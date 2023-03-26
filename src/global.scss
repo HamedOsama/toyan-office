@@ -103,6 +103,10 @@ input:focus {
 /********************************************/
 body.en {
   direction: ltr;
+  .ask_service {
+    padding-left: 0;
+    padding-right: 120px;
+  }
   .about {
     .wrapper img {
       transform: rotateY(180deg);
@@ -153,10 +157,6 @@ body.en {
     .services {
       padding: 0 70px;
     }
-  }
-  .ask_service .ask_descrip ol li {
-    font-size: 18px;
-    line-height: 28px;
   }
   header .swiper .swiper-slide .decription p {
     direction: ltr;
@@ -554,7 +554,7 @@ header {
   background-position: 50% 80%;
   display: flex;
   gap: 90px;
-  padding: 30px 120px;
+  padding-left: 120px;
   h3 {
     color: $white;
     font-size: 24px;
@@ -564,17 +564,16 @@ header {
   }
   .ask_descrip {
     width: calc(50% - 20px);
-    ol li {
-      color: $white;
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 8px;
+    height: 100%;
+    .map_layer {
+      height: inherit;
     }
   }
   .ask_form {
     width: calc(50% - 70px);
     @include space-between();
     flex-direction: column;
+    padding: 30px 0;
     form {
       input,
       textarea {
@@ -1248,6 +1247,9 @@ footer {
     .about .description {
       padding-left: 50px;
     }
+    .ask_service {
+      padding-right: 50px;
+    }
   }
   nav {
     padding: 10px 50px;
@@ -1279,14 +1281,10 @@ footer {
     }
   }
   .ask_service {
-    padding: 30px 50px;
+    padding-left: 50px;
     gap: 40px;
     .ask_form {
       width: calc(50% - 20px);
-    }
-    .ask_descrip ol li {
-      font-size: 18px;
-      line-height: 30px;
     }
   }
   .news {
@@ -1345,6 +1343,9 @@ footer {
   }
 }
 @media (max-width: 888px) {
+  body.en .ask_service {
+    padding: 0;
+  }
   body.en .about .description {
     padding: 0 30px;
     p {
@@ -1463,7 +1464,7 @@ footer {
     }
   }
   .ask_service {
-    padding: 40px 60px;
+    padding: 0;
     height: 100%;
     flex-direction: column;
     gap: 40px;
@@ -1471,6 +1472,12 @@ footer {
     .ask_form {
       width: 100%;
       align-items: self-start;
+    }
+    .ask_form {
+      padding: 40px 60px;
+    }
+    .ask_descrip {
+      height: 600px;
     }
   }
   .clients {
@@ -1604,19 +1611,14 @@ footer {
     }
   }
   .ask_service {
-    padding: 35px;
+    padding: 0;
     gap: 40px;
-    .ask_descrip {
-      padding: 0 15px;
-    }
     .ask_descrip,
     .ask_form {
       width: 100%;
-      ol li {
-        font-size: 16px;
-        margin-top: 0;
-        line-height: 30px;
-      }
+    }
+    .ask_form {
+      padding: 30px 35px;
     }
   }
   .clients {
