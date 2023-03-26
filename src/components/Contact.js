@@ -33,10 +33,10 @@ const Contact = ({ contacts, lng }) => {
             {t("contactPage.5")}
           </h4>
           <a href={`tel:+${contacts.mainPhone}`}>
-            +{contacts.mainPhone}
+            {contacts.mainPhone}
           </a>
           <a href={`tel:+${contacts.subPhone}`}>
-            +{contacts.subPhone}
+            {contacts.subPhone}
           </a>
           <a href={`mailto:${contacts.email}`}>
             {contacts.email}
